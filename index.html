@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <h1>🎯 Guess the Number</h1>
+        <p class="subtitle">Can you beat the computer?</p>
+
+        <div class="score-board">
+
+            <div class="score">
+                <h3>👤 Player</h3>
+                <p id="player-score">0</p>
+            </div>
+
+            <div class="score">
+                <h3>🤖 Computer</h3>
+                <p id="computer-score">0</p>
+            </div>
+
+        </div>
+
+        <div class="high-score">
+            🏆 Your High Score:
+            <span id="high-score">0</span>
+        </div>
+
+        <div class="round-info">
+            <p id="round-message">Best of 5 — First to 3 wins!</p>
+        </div>
+
+        <div class="turn">
+            <p id="turn-message">Your turn! Make a guess.</p>
+        </div>
+
+        <div class="game-area">
+
+            <h2>Guess a number between 1 and 10</h2>
+
+            <input
+                type="number"
+                id="guess-input"
+                min="1"
+                max="10"
+                placeholder="Enter your guess"
+            >
+
+            <button id="guess-btn">Guess!</button>
+
+            <p id="result-message">Good luck! 🍀</p>
+
+            <button id="next-round-btn" hidden>
+                Next Round ➡️
+            </button>
+
+        </div>
+
+        <button id="reset-btn">🔄 Reset Game</button>
+
+    </div>
+
+    <!-- Final Winner Screen -->
+    <div class="winner-screen" id="winner-screen">
+
+        <div class="winner-card">
+
+            <h1 id="winner-title">🏆 Congratulations!</h1>
+
+            <p id="winner-message"></p>
+
+            <button id="play-again-btn">
+                Play Again 🎮
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
